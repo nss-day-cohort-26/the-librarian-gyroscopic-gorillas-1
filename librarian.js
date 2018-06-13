@@ -26,7 +26,8 @@ const Librarian = {
     },
 
     bookSearch: function (genre) {
-
+        let list = libraryDatabase.book[genre]
+        console.log(list)
     }
 }
 
@@ -34,4 +35,4 @@ Librarian.checkoutABook(libraryDatabase.books["1984"])
 console.log(libraryDatabase.books["1984"])
 Librarian.checkABookIn(libraryDatabase.books["Where the Red Fern Grows"])
 console.log(libraryDatabase.books["Where the Red Fern Grows"])
-
+Librarian.bookSearch("Children's Literature")
