@@ -1,8 +1,10 @@
 const Library = {
     addBookToLibrary: function (title, ISBN, author, genre) {
         const book = new Book(title, ISBN, author, genre);
-        this[book.title] = book;
+        libraryDatabase.books[book.title] = book;
     }
+
+    
 }
 
 function Book(title, ISBN, author, genre) {
@@ -13,6 +15,7 @@ function Book(title, ISBN, author, genre) {
     this.checkedOut = false;
     this.dueDate = "";
 }
+
 
 Library.addBookToLibrary("Where the Red Fern Grows", 1482928934987234, "Wilson Rawls", "Children's Literature");
 Library.addBookToLibrary("Tom Sawyer", 2349834982743, "Mark Twain", "Children's Literature");
@@ -25,9 +28,4 @@ Library.addBookToLibrary("The Depressing Life Story of Jordan Williams", 3545354
 Library.addBookToLibrary("The life story of Jennifer Lawson", 222434243424, "Jennifer Lawson", "Biography");
 Library.addBookToLibrary("The Life of Phil", 5558395748, "Philip Patton", "Biography");
 Library.addBookToLibrary("William the Conqueror: 2018", 88895673958, "William Kimball", "Biography");
-
-
-console.log(Library);
-console.log(Library["Tom Sawyer"].ISBN)
-
 
