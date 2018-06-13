@@ -21,16 +21,21 @@ function Customer(firstName, lastName, address, favGenre) {
     this.address = address;
     this.libraryCardNum = 0;
     this.favGenre = favGenre;
-    this.checkoutBook = checkoutBookFunction("1984");
+    this.checkoutBook = checkoutBookFunction;
     this.returnBook = () => {};
    
 }
+
 
 customer.addCustomer("Jim", "Halpert", "Scranton, PA", "NASCAR Sports Comics");
 customer.addCustomer("Jordan", "Williams", "Under a bridge", "Gothic fiction");
 customer.addCustomer("Jennifer", "Lawson", "NCC-1701 Enterprise-D, with Data", "Dystopian Fiction");
 customer.addCustomer("Phillip", "Patton", "On the Battleground", "Military Autobiographies, specifically General Patton");
 customer.addCustomer("William", "Kimball", "Texas", "Sci-fi");
+
+// libraryDatabase.customers["Halpert, Jim"].checkoutBook("1984","Halpert, Jim");
+// checkoutBookFunction("1984","Williams, Jordan");
+
 
 saveDatabase(libraryDatabase, "library")
 
