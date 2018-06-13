@@ -21,7 +21,7 @@ function Customer(firstName, lastName, address, favGenre) {
     this.address = address;
     this.libraryCardNum = 0;
     this.favGenre = favGenre;
-    this.checkoutBook = () => {};
+    this.checkoutBook = checkoutBookFunction("1984");
     this.returnBook = () => {};
    
 }
