@@ -30,6 +30,6 @@ const Librarian = {
     }
 }
 
-Librarian.checkoutABook(libraryDatabase.books["1984"])
+// Librarian.checkoutABook(libraryDatabase.books["1984"])
 
 
