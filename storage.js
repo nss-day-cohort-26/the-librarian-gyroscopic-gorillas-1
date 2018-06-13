@@ -1,7 +1,7 @@
 // Define the database as an object
 const libraryDatabase = {};
 // Define the arrays (a.k.a. tables) in the database to store each type of items
-libraryDatabase.customer = [];
+libraryDatabase.customers = {};
 libraryDatabase.books = {};
 
 const loadDatabase = localStorageKey => {
