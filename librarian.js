@@ -24,10 +24,10 @@ const Librarian = {
         if (book.dueDate < date) {
             alert("You owe $5");
             book.dueDate = 0;
-            remove libraryDatabase.customers[customer].bookshelf[bookTitle]
+            // remove libraryDatabase.customers[customer].bookshelf[bookTitle]
         } else {
             book.dueDate = 0;
-            remove libraryDatabase.customers[customer].bookshelf[bookTitle]
+            // remove libraryDatabase.customers[customer].bookshelf[bookTitle]
         }
     }
     },
@@ -45,17 +45,19 @@ const Librarian = {
             allTheBooks.push("No such genre")
         }
         return allTheBooks
-    }
+   }
 }
 
 
-Librarian.checkABookIn(libraryDatabase.books["Where the Red Fern Grows"])
-console.log(libraryDatabase.books["Where the Red Fern Grows"])
-Librarian.checkABookIn("1984", "Halpert, Jim")
 
-let test = Librarian.bookSearch("Children's Literature")
-console.log(test)
-test = Librarian.bookSearch("Action")
+
+// Librarian.checkABookIn(libraryDatabase.books["Where the Red Fern Grows"])
+// console.log(libraryDatabase.books["Where the Red Fern Grows"])
+// Librarian.checkABookIn("1984", "Halpert, Jim")
+
+// let test = Librarian.bookSearch("Children's Literature")
+// console.log(test)
+// test = Librarian.bookSearch("Action")
 
 // console.log(test)
 // console.log(libraryDatabase.books["1984"].genre)

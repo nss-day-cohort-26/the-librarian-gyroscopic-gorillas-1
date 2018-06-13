@@ -13,7 +13,7 @@ const checkoutBookFunction = (title, custName) => {
             
             libraryDatabase.customers[custName].bookshelf[key] = lib[key]
             lib[key].checkedOut = true
-            // console.log(lib[key]);
+            console.log(lib[key]);
             
             console.log(libraryDatabase.customers[custName].bookshelf);
             break;
