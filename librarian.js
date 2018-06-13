@@ -44,6 +44,7 @@ const Librarian = {
     }
 }
 
+
 Librarian.checkoutABook(libraryDatabase.books["1984"])
 console.log(libraryDatabase.books["1984"])
 Librarian.checkABookIn(libraryDatabase.books["Where the Red Fern Grows"])
