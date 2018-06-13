@@ -4,28 +4,32 @@ const Librarian = {
         customer.libraryCardNum = randNum
     },
 
-    checkoutABook: function (book) {
+    checkoutABook: function (book, customer) {
         if (book.checkedOut) {
             alert("Denied")
         } else {
             let date = new Date();
             date.setDate(date.getDate() + 14);
             book.dueDate = date;
-
+            libraryDatabase.customers[customer].checkoutBook(book,customer);
         }
     },
 
-    checkABookIn: function (book, customer) {
+    checkABookIn: function (bookTitle, customer) {
+        let book = libraryDatabase.books[bookTitle]
+        if (book.checkedOut){
         let date = new Date();
+        
         console.log(date)
-        if (book.dueDate > date) {
+        if (book.dueDate < date) {
             alert("You owe $5");
             book.dueDate = 0;
-            libraryDatabase.customers[customer].bookshelf[book.title] -= libraryDatabase.books[book]
+            remove libraryDatabase.customers[customer].bookshelf[bookTitle]
         } else {
             book.dueDate = 0;
-            libraryDatabase.customers[customer].bookshelf[book.title] -= libraryDatabase.books[book]
+            remove libraryDatabase.customers[customer].bookshelf[bookTitle]
         }
+    }
     },
 
     bookSearch: function (genre) {
@@ -45,14 +49,13 @@ const Librarian = {
 }
 
 
-Librarian.checkoutABook(libraryDatabase.books["1984"])
-console.log(libraryDatabase.books["1984"])
 Librarian.checkABookIn(libraryDatabase.books["Where the Red Fern Grows"])
 console.log(libraryDatabase.books["Where the Red Fern Grows"])
+Librarian.checkABookIn("1984", "Halpert, Jim")
 
 let test = Librarian.bookSearch("Children's Literature")
 console.log(test)
 test = Librarian.bookSearch("Action")
 
-console.log(test)
-console.log(libraryDatabase.books["1984"].genre)
+// console.log(test)
+// console.log(libraryDatabase.books["1984"].genre)

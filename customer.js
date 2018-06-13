@@ -33,7 +33,7 @@ customer.addCustomer("Jennifer", "Lawson", "NCC-1701 Enterprise-D, with Data", "
 customer.addCustomer("Phillip", "Patton", "On the Battleground", "Military Autobiographies, specifically General Patton");
 customer.addCustomer("William", "Kimball", "Texas", "Sci-fi");
 
-// libraryDatabase.customers["Halpert, Jim"].checkoutBook("1984","Halpert, Jim");
+libraryDatabase.customers["Halpert, Jim"].checkoutBook("1984","Halpert, Jim");
 // checkoutBookFunction("1984","Williams, Jordan");
 
 

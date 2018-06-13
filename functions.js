@@ -8,14 +8,14 @@ const checkoutBookFunction = (title, custName) => {
             // console.log("hi");
             // console.log(key);
             // console.log(lib[key]);
-            // console.log(libraryDatabase.customers["Halpert, Jim"].bookshelf);
+            console.log(libraryDatabase.customers["Halpert, Jim"].bookshelf);
             
             
             libraryDatabase.customers[custName].bookshelf[key] = lib[key]
             lib[key].checkedOut = true
             // console.log(lib[key]);
             
-            // console.log(libraryDatabase.customers[custName].bookshelf);
+            console.log(libraryDatabase.customers[custName].bookshelf);
             break;
             
         }else if (lib[key].checkedOut===true) {
