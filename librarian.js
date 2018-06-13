@@ -16,8 +16,8 @@ const Librarian = {
 
     checkABookIn: function (book) {
         let date = new Date();
-        date.setDate()
-        if (book.dueDate < date) {
+        console.log(date)
+        if (book.dueDate > date) {
             alert("You owe $5");
             book.dueDate = 0;
         } else {
@@ -25,11 +25,13 @@ const Librarian = {
         }
     },
 
-    bookSearch: function () {
+    bookSearch: function (genre) {
 
     }
 }
 
-Librarian.checkoutABook(libraryDatabase.books["1984"], Jenn)
-
+Librarian.checkoutABook(libraryDatabase.books["1984"])
+console.log(libraryDatabase.books["1984"])
+Librarian.checkABookIn(libraryDatabase.books["Where the Red Fern Grows"])
+console.log(libraryDatabase.books["Where the Red Fern Grows"])
 
