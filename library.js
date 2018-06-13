@@ -10,7 +10,7 @@ function Book(title, ISBN, author, genre) {
     this.ISBN = ISBN;
     this.author = author;
     this.genre = genre;
-    this.checkoutOut = false;
+    this.checkedOut = false;
     this.dueDate = "";
 }
 
