@@ -1,8 +1,9 @@
 const Librarian = {
-    registerACustomer: function() {
-
+    registerACustomer: function(customer) {
+        let randNum = Math.floor(100000000 + Math.random() * 900000000);
+        customer.libraryCardNum = randNum
     },
-    checkoutABook: function (book) {
+    checkoutABook: function (book, customer) {
         if (book.checkedOut) {
             alert("Denied")
         } else {
@@ -10,16 +11,15 @@ const Librarian = {
             let date = new Date();
             date.setDate(date.getDate() + 14);
             book.dueDate = date;
-            console.log(date)
-            book.book
+            customer.bookShelf = book
         }
     },
     checkABookIn: function (book) {
-        // if () {
+        if () {
 
-        // } else {
+        } else {
 
-        // }
+        }
     },
     bookSearch: function () {
 
