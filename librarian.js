@@ -27,3 +27,6 @@ const Librarian = {
 }
 
 Librarian.checkoutABook("1984")
+
+console.log(libraryDatabase.customers) 
+console.log(libraryDatabase.books) 
